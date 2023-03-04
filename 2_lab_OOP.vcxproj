@@ -153,9 +153,11 @@
   <ItemGroup>
     <ClCompile Include="2_lab_OOP.cpp" />
     <ClCompile Include="Color.cpp" />
+    <ClCompile Include="Point.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Color.h" />
+    <ClInclude Include="Point.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
