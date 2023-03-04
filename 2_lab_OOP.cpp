@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include "Color.h"
 #include "Point.h"
+#include "Circle.h"
 
 using namespace std;
 
@@ -8,18 +9,18 @@ int main() {
 	{
 		Color a;
 		Color b("black");
-		Color c(b);
+		Color e(b);
 	}
 
 	cout << endl;
 
 	Color *a = new Color;
 	Color *b = new Color("black");
-	Color *c = new Color(*b);
+	Color *e = new Color(*b);
 
 	delete a;
 	delete b;
-	delete c;
+	delete e;
 
 	cout << endl;
 
@@ -38,4 +39,14 @@ int main() {
 	delete p;
 	delete p2;
 	delete p3;
+
+	cout << endl;
+
+	Circle* c = new Circle;
+	Circle* c2 = new Circle(1, 2, "black", 5);
+	Circle* c3 = new Circle(*c2);
+	delete c;
+	delete c2;
+	delete c3;
+
 }
