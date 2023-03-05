@@ -2,6 +2,7 @@
 #include "Color.h"
 #include "Point.h"
 #include "Circle.h"
+#include "Section.h"
 
 using namespace std;
 
@@ -24,14 +25,6 @@ int main() {
 
 	cout << endl;
 
-	{
-		Point p;
-		Point p2(1, 2, "black");
-		Point p3(p2);
-	}
-
-	cout << endl;
-
 	Point *p = new Point;
 	Point *p2 = new Point(1, 2, "black");
 	Point *p3 = new Point(*p2);
@@ -48,5 +41,14 @@ int main() {
 	delete c;
 	delete c2;
 	delete c3;
+
+	cout << endl;
+
+	Section* s = new Section;
+	Section* s1 = new Section(1, 2, "black", 3, 4, "white");
+	Section* s2 = new Section(*s1);
+	delete s;
+	delete s1;
+	delete s2;
 
 }
