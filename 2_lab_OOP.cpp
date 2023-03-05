@@ -9,39 +9,22 @@ using namespace std;
 
 int main() {
 	{
-		Color a;
-		Color b("black");
-		Color e(b);
+		Point p;
+		Point p2(3, 4, "black");
+		Point p3(p2);
 	}
-
-	cout << endl;
-
-	Color *a = new Color;
-	Color *b = new Color("black");
-	Color *e = new Color(*b);
-
-	delete a;
-	delete b;
-	delete e;
 
 	cout << endl;
 
 	Point *p = new Point;
 	Point *p2 = new Point(1, 2, "black");
 	Point *p3 = new Point(*p2);
+	Point *p4 = new Point(p3);
 
 	delete p;
 	delete p2;
 	delete p3;
-
-	cout << endl;
-
-	Circle* c = new Circle;
-	Circle* c2 = new Circle(1, 2, "black", 5);
-	Circle* c3 = new Circle(*c2);
-	delete c;
-	delete c2;
-	delete c3;
+	delete p4;
 
 	cout << endl;
 
@@ -54,10 +37,26 @@ int main() {
 
 	cout << endl;
 
+	Circle* c = new Circle;
+	Circle c2 = Circle(1, 2, "black", 5);
+	Circle* c3 = new Circle(*c);
+	double x = c2.perimeter();
+	cout << x << endl;
+	delete c;
+	delete c3;
+
+	cout << endl;
+
 	StrangeEllipse* el = new StrangeEllipse;
-	StrangeEllipse* el2 = new StrangeEllipse(1, 2, "black", 5, 6);
-	StrangeEllipse* el3 = new StrangeEllipse(*el2);
+	StrangeEllipse el2 = StrangeEllipse(1, 2, "black", 5, 6);
+	StrangeEllipse* el3 = new StrangeEllipse(*el);
+	double y = el2.perimeter();
+	cout << y << endl;
 	delete el;
-	delete el2;
 	delete el3;
+
+	cout << endl;
+
+	Point *pa = new StrangeEllipse(1, 2, "red", 3, 4);
+	delete pa;
 }

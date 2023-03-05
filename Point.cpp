@@ -22,6 +22,13 @@ Point::Point(const Point& p) {
 	this->color = new Color(*(p.color));
 }
 
+Point::Point(const Point *p) {
+	cout << "Point(const Point* p)" << endl;
+	this->x = p->x;
+	this->y = p->y;
+	this->color = new Color(*(p->color));
+}
+
 Point::~Point() {
 	cout << "~Point() " << x << " " << y << endl;
 	delete color;

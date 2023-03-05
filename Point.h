@@ -10,5 +10,6 @@ public:
 	Point();
 	Point(int x, int y, string color);
 	Point(const Point& p);
+	Point(const Point *p);
 	~Point();
 };

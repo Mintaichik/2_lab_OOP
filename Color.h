@@ -1,14 +1,26 @@
 #pragma once
+#include <iostream>
 #include <string>
 
 using namespace std;
 
 class Color {
-private: 
+protected: 
 	string color;
 public:
-	Color();
-	Color(string color);
-	Color(const Color& color);
-	~Color();
+	Color() {
+		cout << "Color()" << endl;
+		color = "white";
+	}
+	Color(string color) {
+		cout << "Color(string color)" << endl;
+		this->color = color;
+	}
+	Color(const Color& color) {
+		cout << "Color(const Color& color)" << endl;
+		this->color = color.color;
+	}
+	~Color() {
+		cout << "~Color() " << color << endl;
+	}
 };
