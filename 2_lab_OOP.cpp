@@ -3,7 +3,7 @@
 #include "Point.h"
 #include "Circle.h"
 #include "Section.h"
-#include "Ellipse.h"
+#include "StrangeEllipse.h"
 
 using namespace std;
 
@@ -54,9 +54,9 @@ int main() {
 
 	cout << endl;
 
-	Ellipse* el = new Ellipse;
-	Ellipse* el2 = new Ellipse(1, 2, "black", 5, 6);
-	Ellipse* el3 = new Ellipse(*el2);
+	StrangeEllipse* el = new StrangeEllipse;
+	StrangeEllipse* el2 = new StrangeEllipse(1, 2, "black", 5, 6);
+	StrangeEllipse* el3 = new StrangeEllipse(*el2);
 	delete el;
 	delete el2;
 	delete el3;

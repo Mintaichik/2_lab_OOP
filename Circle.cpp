@@ -1,5 +1,7 @@
 #include "Circle.h"
 #include <iostream>
+#include <cmath>
+#define M_PI 3.14159265358979323846
 
 Circle::Circle() {
 	cout << "Circle()" << endl;
@@ -18,4 +20,9 @@ Circle::Circle(const Circle& circle) : Point((Point&)circle) {
 
 Circle::~Circle() {
 	cout << "~Circle() " << radius << endl;
+}
+
+double Circle::perimeter() {
+	double result = 2 * M_PI * radius;
+	return radius;
 }
