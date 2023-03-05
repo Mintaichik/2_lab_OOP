@@ -2,7 +2,7 @@
 #include "Point.h"
 
 class Section  {
-protected:
+private:
 	Point *p1;
 	Point *p2;
 public:

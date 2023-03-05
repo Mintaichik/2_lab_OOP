@@ -3,6 +3,7 @@
 #include "Point.h"
 #include "Circle.h"
 #include "Section.h"
+#include "Ellipse.h"
 
 using namespace std;
 
@@ -51,4 +52,12 @@ int main() {
 	delete s1;
 	delete s2;
 
+	cout << endl;
+
+	Ellipse* el = new Ellipse;
+	Ellipse* el2 = new Ellipse(1, 2, "black", 5, 6);
+	Ellipse* el3 = new Ellipse(*el2);
+	delete el;
+	delete el2;
+	delete el3;
 }

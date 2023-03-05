@@ -1,10 +1,6 @@
 #include "Point.h"
 #include <iostream>
 
-Color* Point::get_Color()const {
-	cout << "get_Color()" << endl;
-	return color;
-}
 Point::Point() {
 	cout << "Point()" << endl;
 	x = 0;
@@ -23,7 +19,7 @@ Point::Point(const Point& p) {
 	cout << "Point(const Point& p)" << endl;
 	this->x = p.x;
 	this->y = p.y;
-	this->color = new Color(*(p.get_Color()));
+	this->color = new Color(*(p.color));
 }
 
 Point::~Point() {
