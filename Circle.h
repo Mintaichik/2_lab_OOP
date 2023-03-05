@@ -1,7 +1,7 @@
 #pragma once
-#include "Point.h"
+#include "Point_ptr.h"
 
-class Circle : public Point {
+class Circle : public Point_ptr {
 protected: 
 	int radius;
 public:

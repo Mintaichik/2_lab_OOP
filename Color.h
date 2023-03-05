@@ -8,18 +8,18 @@ class Color {
 protected: 
 	string color;
 public:
-	Color() {
+	Color() : color("white") {
 		cout << "Color()" << endl;
-		color = "white";
 	}
-	Color(string color) {
+
+	Color(string color) : color(color){
 		cout << "Color(string color)" << endl;
-		this->color = color;
 	}
-	Color(const Color& color) {
+
+	Color(const Color& color) : color(color.color) {
 		cout << "Color(const Color& color)" << endl;
-		this->color = color.color;
 	}
+
 	~Color() {
 		cout << "~Color() " << color << endl;
 	}

@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include "Color.h"
 #include "Point.h"
+#include "Point_ptr.h"
 #include "Circle.h"
 #include "Section.h"
 #include "StrangeEllipse.h"
@@ -9,17 +10,33 @@ using namespace std;
 
 int main() {
 	{
-		Point p;
-		Point p2(3, 4, "black");
-		Point p3(p2);
+		Point_ptr p;
+		Point_ptr p2(3, 4, "black");
+		Point_ptr p3(p2);
 	}
 
 	cout << endl;
+
+	Point_ptr *p_ptr = new Point_ptr;
+	Point_ptr *p2_ptr = new Point_ptr(1, 2, "black");
+	Point_ptr *p3_ptr = new Point_ptr(*p2_ptr);
+	Point_ptr *p4_ptr = new Point_ptr(p3_ptr);
+
+	cout << "\n\n";
 
 	Point *p = new Point;
 	Point *p2 = new Point(1, 2, "black");
 	Point *p3 = new Point(*p2);
 	Point *p4 = new Point(p3);
+
+	cout << endl;
+
+	delete p_ptr;
+	delete p2_ptr;
+	delete p3_ptr;
+	delete p4_ptr;
+
+	cout << "\n\n";
 
 	delete p;
 	delete p2;
@@ -57,6 +74,6 @@ int main() {
 
 	cout << endl;
 
-	Point *pa = new StrangeEllipse(1, 2, "red", 3, 4);
+	Point_ptr *pa = new StrangeEllipse(1, 2, "red", 3, 4);
 	delete pa;
 }

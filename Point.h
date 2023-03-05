@@ -5,7 +5,7 @@ class Point {
 private:
 	int x;
 	int y;
-	Color *color;
+	Color color;
 public:
 	Point();
 	Point(int x, int y, string color);

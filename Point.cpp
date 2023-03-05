@@ -1,35 +1,24 @@
-#include "Point.h"
 #include <iostream>
+#include "Point.h"
 
-Point::Point() {
+Point::Point() : x(0), y(0), color("black") {
 	cout << "Point()" << endl;
-	x = 0;
-	y = 0;
-	color = new Color;
 }
 
-Point::Point(int x, int y, string color) {
+Point::Point(int x, int y, string color) : x(x), y(y), color(color) {
 	cout << "Point(int x, int y, string color)" << endl;
-	this->x = x;
-	this->y = y;
-	this->color = new Color(color);
+
 }
 
-Point::Point(const Point& p) {
+Point::Point(const Point& p) : x(p.x), y(p.y), color(p.color) {
 	cout << "Point(const Point& p)" << endl;
-	this->x = p.x;
-	this->y = p.y;
-	this->color = new Color(*(p.color));
+
 }
 
-Point::Point(const Point *p) {
+Point::Point(const Point* p) : x(p->x), y(p->y), color(p->color) {
 	cout << "Point(const Point* p)" << endl;
-	this->x = p->x;
-	this->y = p->y;
-	this->color = new Color(*(p->color));
 }
 
 Point::~Point() {
-	cout << "~Point() " << x << " " << y << endl;
-	delete color;
+	cout << "~Point() " << x << y << endl;
 }

@@ -1,10 +1,10 @@
 #pragma once
-#include "Point.h"
+#include "Point_ptr.h"
 
 class Section  {
 private:
-	Point *p1;
-	Point *p2;
+	Point_ptr *p1;
+	Point_ptr *p2;
 public:
 	Section();
 	Section(int x1, int y1, string color1, int x2, int y2, string color2);

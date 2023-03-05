@@ -153,15 +153,17 @@
   <ItemGroup>
     <ClCompile Include="2_lab_OOP.cpp" />
     <ClCompile Include="Circle.cpp" />
-    <ClCompile Include="StrangeEllipse.cpp" />
     <ClCompile Include="Point.cpp" />
+    <ClCompile Include="StrangeEllipse.cpp" />
+    <ClCompile Include="Point_ptr.cpp" />
     <ClCompile Include="Section.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Circle.h" />
     <ClInclude Include="Color.h" />
-    <ClInclude Include="StrangeEllipse.h" />
     <ClInclude Include="Point.h" />
+    <ClInclude Include="StrangeEllipse.h" />
+    <ClInclude Include="Point_ptr.h" />
     <ClInclude Include="Section.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
