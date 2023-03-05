@@ -12,4 +12,7 @@ public:
 	Point_ptr(const Point_ptr& p);
 	Point_ptr(const Point_ptr *p);
 	~Point_ptr();
+	void setX(int x);
+	void setY(int y);
+	void setColor(string color);
 };

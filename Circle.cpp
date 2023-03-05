@@ -23,3 +23,8 @@ double Circle::perimeter() {
 	double result = 2 * M_PI * radius;
 	return result;
 }
+
+void Circle::setRadius(int radius) {
+	cout << "setRadius(int radius)" << endl;
+	this->radius = radius;
+}

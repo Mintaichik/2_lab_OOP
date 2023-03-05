@@ -33,3 +33,18 @@ Point_ptr::~Point_ptr() {
 	cout << "~Point_ptr() " << x << " " << y << endl;
 	delete color;
 }
+
+void Point_ptr::setX(int x) {
+	cout << "setX(int x)" << endl;
+	this->x = x;
+}
+
+void Point_ptr::setY(int y) {
+	cout << "setY(int y)" << endl;
+	this->y = y;
+}
+
+void Point_ptr::setColor(string color) {
+	cout << "setColor(string color)" << endl;
+	this->color->setColor(color);
+}

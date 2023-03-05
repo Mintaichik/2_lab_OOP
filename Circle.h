@@ -10,4 +10,5 @@ public:
 	Circle(const Circle& circle);
 	~Circle();
 	double perimeter();
+	void setRadius(int radius);
 };

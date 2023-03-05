@@ -8,7 +8,7 @@ class Color {
 protected: 
 	string color;
 public:
-	Color() : color("white") {
+	Color() : color("none") {
 		cout << "Color()" << endl;
 	}
 
@@ -22,5 +22,10 @@ public:
 
 	~Color() {
 		cout << "~Color() " << color << endl;
+	}
+
+	void setColor(string color) {
+		cout << "setColor(string color)" << endl;
+		this->color = color;
 	}
 };

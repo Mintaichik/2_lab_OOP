@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Point.h"
 
-Point::Point() : x(0), y(0), color("black") {
+Point::Point() : x(0), y(0), color("none") {
 	cout << "Point()" << endl;
 }
 
@@ -20,5 +20,5 @@ Point::Point(const Point* p) : x(p->x), y(p->y), color(p->color) {
 }
 
 Point::~Point() {
-	cout << "~Point() " << x << y << endl;
+	cout << "~Point() " << x << ' ' << y << endl;
 }
